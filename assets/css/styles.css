@@ -21,10 +21,16 @@ html, body {
     width: 100%;
 }
 
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
 .header-wrapper {
     position: relative;
     background: url('/assets/images/Group-54.png') no-repeat center center;
-    background-size: contain; 
+    background-size: cover; 
     width: 100%;
     height: 100vh;
     overflow: hidden;
@@ -1061,3 +1067,95 @@ letter-spacing: 0%;
     justify-content: center; /* Centers buttons horizontally */
 }
 
+.hiddentext {
+    display: none;
+}
+
+/* Media Query for 768px */
+@media (max-width: 768px) {
+    .navbar .call-now {
+        display: block;
+        text-align: right;
+        margin-top: 10px;
+    }
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+    .three-images {
+        display: block;
+    }
+    .content-section {
+        display: flex;
+        flex-direction: column;
+    }
+    .slider {
+        display: block;
+    }
+    .slider img {
+        order: 1;
+    }
+    .slider h2 {
+        order: 2;
+    }
+    .slider p {
+        order: 3;
+    }
+    .slider .dots {
+        order: 4;
+    }
+    .buttons-tooltips {
+        display: flex;
+        justify-content: space-around;
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+/* Media Query for 360px */
+@media (max-width: 360px) {
+    .navbar .menu-button {
+        display: block;
+    }
+    .navbar .nav-items {
+        display: none;
+    }
+    .header {
+        display: flex;
+        flex-direction: column;
+    }
+    .three-images {
+        display: none;
+    }
+    .content-section {
+        display: flex;
+        flex-direction: column;
+    }
+    .slider {
+        display: flex;
+        flex-direction: column;
+    }
+    .slider img {
+        order: 1;
+    }
+    .slider h2 {
+        order: 2;
+    }
+    .slider p {
+        order: 3;
+    }
+    .slider .dots {
+        order: 4;
+    }
+    .buttons-tooltips {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+}
