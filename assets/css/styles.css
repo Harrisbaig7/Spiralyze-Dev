@@ -1,24 +1,64 @@
-/* General Styles */
+/* G
+neral Styles */
 * {
-    overflow-x: hidden; 
+    /* overflow-x: hidden;  */
 
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Montserrat;
+    font-family: 'Montserrat';
 
 }
 
-body {
-    background-color: #858585;
+html, body {
+    margin: 0;
+    padding: 0;
+    /* overflow-x: hidden; */
+    height: 100%;
+    font-family: 'Montserrat';
+    background: #F5F5F5;
     text-align: center;
     width: 100%;
 }
 
 .header-wrapper {
     position: relative;
-    background: url('Group-54.png') no-repeat center center/cover;
+    background: url('/assets/images/Group-54.png') no-repeat center center;
+    background-size: contain; 
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
 }
+
+
+.curve1 {
+    position: absolute;
+    bottom:0; 
+    left: 0;
+    width: 100%;
+    height: auto; 
+    z-index: 1; 
+}
+
+/* White Wave (Second Layer) */
+.curve2 {
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    width: 100%;
+    height: auto; 
+    z-index: 2; 
+}
+
+.curve1 img, .curve2 img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    display: block;
+
+   
+}
+
 
 /* Navbar */
 .navbar {
@@ -34,6 +74,10 @@ body {
     font-weight: bold;
     text-decoration: none;
     color: white;
+    /* justify-self: flex-start; */
+    /* justify-content: center;
+    align-items: center; */
+
 }
 
 .nav-links {
@@ -62,7 +106,6 @@ body {
 
 /* Header */
 .header {
-    
     color: white;
     text-align: left;
     padding: 80px 10%;
@@ -196,77 +239,90 @@ button:hover {
 
 .footer {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    background-color: #333;
-    color: white;
-    padding: 20px 10%;
-    gap: 20px;
+    justify-content: center; /* Keeps images together */
+    align-items: center;
+    position: relative;
+    width: 100%;
+    height: auto;
+    padding: 20px;
+    overflow: hidden;
+    flex-wrap: wrap; /* Allows responsive wrapping */
+    background-color: rgba(255, 255, 255, 0.2);
+    
 }
-.footer-section {
-    flex: 1;
-}
-/* Left Section Styles */
+
 .footer-section.left {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+    position: relative; /* Ensures relative positioning for absolute elements */
 }
-.footer-section.left h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
+
+.image-container {
+    position: relative;
+    display: inline-block;
 }
-.footer-item {
-    display: flex;
-    gap: 10px;
-    align-items: flex-start;
+
+.base-image {
+    width: 700px; /* Adjust size as needed */
+    height: auto;
+    
 }
-.footer-item svg {
-    min-width: 20px;
-    height: 20px;
-    fill: #00ff00;
+
+.overlay-image {
+    position: absolute;
+    top: 50%; /* Adjust to center the overlay */
+    left: 50%; /* Adjust to center the overlay */
+    transform: translate(-50%, -50%); /* Centers the overlay perfectly */
+    width: 450px; /* Adjust size as needed */
+    height: auto;
 }
-.footer-item p {
-    font-size: 0.9rem;
-    line-height: 1.5;
-}
-/* Right Section Styles */
+
 .footer-section.right {
     position: relative;
+    display: inline-block;
+    justify-content: center;
+    align-items: center;
 }
+
 .footer-video-container {
     position: relative;
-    width: 100%;
-    padding-top: 56.25%; /* 16:9 Aspect Ratio */
-    background: #000;
-    border-radius: 10px;
-    overflow: hidden;
+    width: 600px; /* Adjust container size */
+    height: 600px; /* Adjust container size */
 }
-.footer-video {
+
+
+
+.mask-group {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
+    left: 0; /* Align to the left */
+    bottom: 0; /* Align to the bottom */
+    width: 700px; /* Adjust size as needed */
+    height: 500;
 }
-.play-icon {
+
+.vector-image {
+    position: absolute;
+    top: 530px;
+    right: 0; /* Align to the top-right corner */
+    width: 226px; /* Adjust size */
+    height: auto;
+}
+
+.group-44 {
     position: absolute;
     top: 50%;
     left: 50%;
-    transform: translate(-50%, -50%);
-    color: white;
-    font-size: 3rem;
+    transform: translate(-50%, -50%); /* Center the image */
+    width: 100px; /* Adjust size */
+    height: auto;
+    cursor: pointer; /* Default cursor */
+    transition: transform 0.3s ease-in-out;
+}
+
+/* Change cursor on hover */
+.footer-video-container:hover .group-44 {
     cursor: pointer;
-    z-index: 2;
+    transform: translate(-50%, -50%) scale(1.1); /* Slightly enlarge on hover */
 }
-.footer-logo {
-    position: absolute;
-    bottom: 10px;
-    right: 10px;
-    width: 50px;
-    opacity: 0.8;
-}
+
 
 .footer-bottom {
     display: flex;
@@ -299,6 +355,8 @@ button:hover {
     margin: 0 5px;
 }
 
+
+
 /* we understand */
 .container {
     display: flex;
@@ -306,6 +364,7 @@ button:hover {
     width: 100%;
     max-width: 1200px;
     margin: auto;
+    margin-top:80px;
 }
 
 .we-understand {
@@ -365,6 +424,10 @@ button:hover {
     cursor: pointer;
 }
 
+.center-text {
+    text-align: center;
+}
+
 .last-text button:hover {
     background: #145aa8;
 }
@@ -373,7 +436,7 @@ button:hover {
     padding: 10px 20px;
     background-color: transparent;
     box-shadow: 0px 4px 6px 0px #00000014;
-    color: white;
+    color: black;
     border: 2px solid #5BC8AF;
     border-radius: 4px;
     cursor: pointer;
@@ -386,86 +449,109 @@ button:hover {
 
     &:hover {
         background-color: transparent;
-        color: #5BC8AF;
+        color: #00c396;
     }
 }
 
-.tooltip-button {
-    position: relative;
-    display: flex;
+
+/* Secondary Button */
+.secondary-button {
+    display: flex; 
+    justify-content: center;
     align-items: center;
-    /* gap: 8px; */ /* Space between text and icon */
+    align-content: center;
+    align-self: start;
+    gap: 30px;
+    /* margin-right: 20px; */
+    padding: 25px 170px !important;
+    background-color: transparent;
+    box-shadow: 0px 4px 6px 0px #00000014;
+    color: black;
+    border: 2px solid #5BC8AF;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+    line-height: 28px;
+    font-weight: 700;
+    width: 250px; 
+    /* min-width: 250px;
+    max-width: 250px;  */
+    text-align: center;
+    transition: all 0.3s ease-in-out;
+    overflow: hidden;
+    white-space: nowrap;
+    
 }
 
-.extra-padding {
-    padding: 10px 30px;
+.secondary-button:hover {
+    background-color: transparent;
+    color: #00c396;
+}
+
+/* Tooltip Wrapper */
+.tooltip-container {
+    position: relative;
+    display: inline-block;
+    text-align: center;
 }
 
 /* Tooltip Box */
-.tooltip-button::before {
-    content: "We’re experienced in our individual crafts and understand how each one of our roles impacts your plan holistically.";
+.tooltip {
     position: absolute;
-    width: 250px;
-    bottom: 30%;
-    z-index: 500;
+    top: calc(100%);
     left: 50%;
-    font-size: 13px;
-    border-radius: 5px;
-    /* font-weight: 400; */
     transform: translateX(-50%);
     background-color: #297C6B;
     color: #fff;
-    padding: 6px 12px;
+    padding: 12px 14px;
+    border-radius: 5px;
+    font-size: 14px;
     text-align: center;
+    width: 260px;
     white-space: normal;
     word-wrap: break-word;
     overflow-wrap: break-word;
     opacity: 0;
     visibility: hidden;
-    transition: opacity 0.3s ease-in-out;
+    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;
+    z-index: 1000;
+    height: auto;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
 }
 
-/* Tooltip Caret (Arrow) */
-.tooltip-button::after {
+/* Tooltip Arrow (Pointing Up) */
+.tooltip::before {
     content: "";
     position: absolute;
-    bottom: calc(100% - 2px);
+    top: -10px; /* Position arrow correctly */
     left: 50%;
     transform: translateX(-50%);
     border-width: 6px;
     border-style: solid;
-    border-color: #297C6B transparent transparent transparent;
-    opacity: 0;
-    visibility: hidden;
-    transition: opacity 0.3s ease-in-out;
+    border-color: transparent transparent #297C6B transparent;
 }
 
-/* Show tooltip on hover */
-.tooltip-button:hover::before,
-.tooltip-button:hover::after {
+/* Show Tooltip on Hover */
+.tooltip-container:hover .tooltip {
     opacity: 1;
     visibility: visible;
+    transform: translateX(-50%) translateY(5px);
 }
 
-/* Info Icon */
-.info-icon {
-    opacity: 0;
-    transition: opacity 0.3s ease-in-out;
+.cs-row{
+    margin-bottom: 36px;
 }
-
-.tooltip-button:hover .info-icon {
-    opacity: 1;
-}
-
 
 
 
 .custom-row-section {
     padding: 0 50px;
+    margin-bottom: 80px;
 
     .custom-row {
         display: flex;
         justify-content: space-between;
+        gap: 36px;
 
         &.button-row { 
             align-items: stretch;
@@ -483,16 +569,20 @@ button:hover {
             }
 
             p {
-                font-size: 16px;
+                font-size: 14px;
+                line-height: 24px;
                 padding: 10px;
                 border-radius: 8px;
             }
         }
     }
 
+         /* .text{
+                font-style: italic;
+            } */
+
     .button-section {
         display: flex;
-
         flex-direction: column;  /* Stacks text & button */
         align-items: center; /* Centers the button horizontally */
         gap: 10px; /* Space between text & button */
@@ -502,18 +592,23 @@ button:hover {
         display: flex;
         align-items: center;
         justify-content: center;
-        margin: 20px 0;
-        gap: 20px; 
+        margin: 64px 0 32px 0;
+        gap: 30px; 
 
         .main {
             width: 250px;
             height: auto;
         }
 
+        .main1{
+            width: 450px;
+            height: auto;
+        }
+
         .line {
             flex-grow: 1;
             height: 0.2px; 
-            background-color: #000000; 
+            background-color: #EAEAEA; 
         }
         
     }
@@ -593,52 +688,7 @@ blockquote {
 .we-can-organize .card button:hover {
     background: #0056b3;
 }
-
-/* Form Inputs */
-
-/* .input-container {
-    position: relative;
-    width: 100%;
-    max-width: 300px;
-    margin: 20px 0;
-}
-
-.input-container input {
-    width: 100%;
-    padding: 12px 10px;
-    border: 2px solid #ccc;
-    border-radius: 5px;
-    font-size: 16px;
-    outline: none;
-    transition: border-color 0.3s;
-}
-
-.input-container label {
-    position: absolute;
-    top: 50%;
-    left: 10px;
-    transform: translateY(-50%);
-    color: #888;
-    font-size: 16px;
-    pointer-events: none;
-    transition: all 0.3s ease;
-    background: white;
-    padding: 0 5px;
-}
-
-.input-container input:focus {
-    border-color: #1976d2;
-}
-
-.input-container input:focus + label,
-.input-container input:not(:placeholder-shown) + label {
-    top: 0;
-    left: 8px;
-    font-size: 12px;
-    color: #1976d2;
-} */
-
-/* --------------------------------------------------------------------------------------------------------------------------------------------------- */
+--------------------------------------------------------------------------------------------------------------------------------------- */
 
 .get-an-intervention-content {
 font-weight: 400;
@@ -658,6 +708,15 @@ letter-spacing: 0%;
     border-radius: 10px;
     background: #f5f5f5;
     padding: 20px;
+}
+
+.info-icon {
+    opacity: 1;
+    transition: opacity 0.3s ease-in-out;
+    margin-left: 5px; /* Space between text and icon */
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .slides {
@@ -721,7 +780,10 @@ letter-spacing: 0%;
     margin: 0 4px;
     background: gray;
     border-radius: 50%;
-    display: inline-block;
+    display: flex;
+    gap: 10px;
+    cursor: pointer;    
+
 }
 
 .dots span.active {
@@ -806,10 +868,6 @@ letter-spacing: 0%;
     align-items: center;
 }
 
-/* .text-box h3 {
-    margin-bottom: 5px;
-} */
-
 .quote-icon {
     font-size: 24px;
     opacity: 0.7;
@@ -886,36 +944,7 @@ letter-spacing: 0%;
     line-height: 1.5;
 }
 
-/* Navigation Buttons */
-.carousel-btn {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    background: rgba(0, 0, 0, 0.5);
-    color: white;
-    border: none;
-    width: 50px;
-    height: 50px;
-    font-size: 24px;
-    cursor: pointer;
-    border-radius: 50%;
-    transition: 0.3s;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
 
-.carousel-btn:hover {
-    background: rgba(0, 0, 0, 0.8);
-}
-
-.prev {
-    left: 10px;
-}
-
-.next {
-    right: 10px;
-}
 
 .number{
     color: #5BC8AF;
@@ -930,6 +959,8 @@ letter-spacing: 0%;
 .slideshow-container {
     /* max-width: 1000px; */
     position: relative;
+    margin-top: 50px;
+    
     /* margin: auto; */
   }
   
@@ -951,6 +982,7 @@ letter-spacing: 0%;
     font-size: 18px;
     transition: 0.6s ease;
     border-radius: 0 3px 3px 0;
+    -webkit-user-select: none;
     user-select: none;
   }
   
@@ -967,7 +999,11 @@ letter-spacing: 0%;
   
   /* On hover, add a black background color with a little bit see-through */
   .prev:hover, .next:hover {
-    background-color: rgba(0,0,0,0.8);
+    background-color: #5BC8AF;
+    color-scheme: white;
+    color: #5BC8AF;
+    
+
   }
   
   /* Caption text */
@@ -995,7 +1031,7 @@ letter-spacing: 0%;
     cursor: pointer;
     height: 15px;
     width: 15px;
-    margin: 0 2px;
+    margin: 0 15px;
     background-color: #bbb;
     border-radius: 50%;
     display: inline-block;
@@ -1003,7 +1039,8 @@ letter-spacing: 0%;
   }
   
   .active, .dot:hover {
-    background-color: #717171;
+    background-color: #5BC8AF;
+    
   }
   
   /* Fading animation */
@@ -1016,29 +1053,11 @@ letter-spacing: 0%;
     from {opacity: .4}
     to {opacity: 1}
   }
-/* 
 
-  .button-row {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 10px;
-    width: 50%;
-    margin: auto;
+  .custom-row.button-row {
+    display: flex;
+    flex-wrap: wrap; /* Ensures buttons wrap properly if needed */
+    gap: 20px; /* Adjust spacing between buttons */
+    justify-content: center; /* Centers buttons horizontally */
 }
 
-.button {
-    display: grid;
-    place-items: center;
-    padding: 10px;
-    background-color: #007bff;
-    color: white;
-    width: 100%;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-    text-align: center;
-}
-
-.button:hover {
-    background-color: #0056b3;
-} */

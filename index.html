@@ -5,14 +5,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SPIRALYZE DEV</title>
     <link rel="stylesheet" href="./assets/css/styles.css">
+    <link rel="stylesheet" href="./assets/css/responsive.css">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,400;0,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-
-    <div class="header-wrapper test">
-
+    <div class="header-wrapper">
         <!-- Navigation Bar -->
         <nav class="navbar">
             <img src="./assets/images/Vector.png" alt="">
@@ -73,10 +73,10 @@
                     </div>
                 </div>
             </div>
-            <div class="header-wrapper">
+            <div class="curve1" >
                 <img src="./assets/images/Group-53.png" alt="Wave Design">
             </div>
-            <div class="header-wrapper">
+            <div class="curve2">
                 <img src="./assets/images/Rectangle-2.png" alt="Wave Design">
             </div>
         </header>
@@ -110,7 +110,11 @@
                 <!-- Third Section with Button -->
                 <div class="section button-section">
                     <p>To stimulate social contacts, neighborhood initiatives can be developed. Social meeting places, such as pubs and churches can help to foster the development of close and peripheral relationships.</p>
-                    <button class="primary-button">Learn More</button>
+                    <button class="primary-button">92% Success Rate
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="currentColor" class="svg-icon">
+                            <path d="M2 12h16M12 6l6 6-6 6"/>
+                        </svg>
+                    </button>
                 </div>
             </div>
         </div>
@@ -171,13 +175,13 @@
             </div>
           
             <!-- Next and previous buttons -->
-            <a class="prev" onclick="plusSlides(-1)"><img src="./assets/images/prev.png" ></a>
-            <a class="next" onclick="plusSlides(1)"><img src="./assets/images/next.png" ></a>
+            <a class="prev" onclick="plusSlides(-1)"><img src="./assets/images/prev.png" alt="Previous Slide" title="Previous Slide"></a>
+            <a class="next" onclick="plusSlides(1)"><img src="./assets/images/next.png" alt="Next Slide" title="Next Slide"></a>
         </div>
           <br>
           
           <!-- The dots/circles -->
-          <div style="text-align:center">
+          <div class="center-text">
             <span class="dot" onclick="currentSlide(1)"></span>
             <span class="dot" onclick="currentSlide(2)"></span>
             <span class="dot" onclick="currentSlide(3)"></span>
@@ -187,13 +191,13 @@
         
             <!-- Horizontal Divider with Logo -->
             <div class="horizontal-divider">
-                <img class="main" src="./assets/images/we-can-organize-everything.png" alt="Logo">
+                <img class="main1" src="./assets/images/we-can-organize-everything.png" alt="Logo">
                 <div class="line"></div>
             </div>
 
-            <div class="custom-row">
+            <div class="custom-row cs-row">
                 <div class="section">
-                    <p><strong>Interventions</strong> should focus on older adult’s desire for connectedness, participation and independence.</p>
+                    <p><em>Interventions</em> <span>should focus on older adult’s desire for connectedness, participation and independence.</span></p>
                 </div>
                 <div class="section">
                     <p>Loneliness and social isolation are growing public health concerns in our aging society. Whilst these experiences occur across the life span, 50% of individuals aged over 60 are at risk of social isolation and one-third will experience some degree of loneliness later in life. It is vital to reduce loneliness and social isolation among older adults.</p>
@@ -203,59 +207,78 @@
                     <p>The methodology framework proposed by Asked and O’Malley and further developed by Levac, et al. was used to guide the scoping review process. A total of 33 reviews met the inclusion criteria, evaluating a range of interventions targeted at older people residing in the community or institutionalised settings. </p>
                 </div>
             </div>
+            <!-- Buttons with Tooltips -->
             <div class="custom-row button-row">
-                <div class="section">
-                    <button class="primary-button tooltip-button extra-padding">
+                <div class=" tooltip-container">
+                    <button class="secondary-button extra-padding">
                         Needs Assessment
-                        <svg class="info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#5BC8AF">
-                            <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-6h2Zm0-8h-2V7h2Z"/>
-                        </svg>
+                        <span class="info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#5BC8AF">
+                                <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-6h2Zm0-8h-2V7h2Z"/>
+                            </svg>
+                        </span>
                     </button>
+                    <div class="tooltip">We’re experienced in our individual crafts and understand how each one of our roles impacts your plan holistically.</div>
                 </div>
-                <div class="section">
-                    <button class="primary-button tooltip-button extra-padding">
+            
+                <div class="section tooltip-container">
+                    <button class="secondary-button extra-padding">
                         Treatment Planning & Placement
-                        <svg class="info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#5BC8AF">
-                            <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-6h2Zm0-8h-2V7h2Z"/>
-                        </svg>
+                        <span class="info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#5BC8AF">
+                                <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-6h2Zm0-8h-2V7h2Z"/>
+                            </svg>
+                        </span>
                     </button>
+                    <div class="tooltip">Treatment planning is customized to individual needs.</div>
                 </div>
-                
-                <div class="section">
-                    <button class="primary-button tooltip-button extra-padding">
+            
+                <div class=" tooltip-container">
+                    <button class="secondary-button extra-padding">
                         Transportation & Logistics
-                        <svg class="info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#5BC8AF">
-                            <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-6h2Zm0-8h-2V7h2Z"/>
-                        </svg>
+                        <span class="info-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#5BC8AF">
+                                <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-6h2Zm0-8h-2V7h2Z"/>
+                            </svg>
+                        </span>
                     </button>
+                    <div class="tooltip">We provide transportation assistance.</div>
                 </div>
             </div>
+            
+
             <div class="custom-row">
-                <div class="section">
-                    <button class="primary-button tooltip-button extra-padding">
+                <div class="section tooltip-container">
+                    <button class="secondary-button extra-padding">
                         Insurance Advocacy
                         <svg class="info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#5BC8AF">
                             <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-6h2Zm0-8h-2V7h2Z"/>
                         </svg>
                     </button>
+                    <div class="tooltip">We help navigate insurance processes.</div>
                 </div>
-                <div class="section">
-                    <button class="primary-button tooltip-button extra-padding">
+
+                <div class="section tooltip-container">
+                    <button class="secondary-button extra-padding">
                         Employment Advocacy
                         <svg class="info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#5BC8AF">
                             <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-6h2Zm0-8h-2V7h2Z"/>
                         </svg>
                     </button>
+                    <div class="tooltip">Supporting individuals in job placement.</div>
                 </div>
-                <div class="section">
-                    <button class="primary-button tooltip-button extra-padding">
+
+                <div class="section tooltip-container">
+                    <button class="secondary-button extra-padding">
                         Aftercare Planning
                         <svg class="info-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="16" height="16" fill="#5BC8AF">
                             <path d="M12 2a10 10 0 1 0 10 10A10.011 10.011 0 0 0 12 2Zm1 15h-2v-6h2Zm0-8h-2V7h2Z"/>
                         </svg>
                     </button>
+                    <div class="tooltip">Providing ongoing support after initial treatment.</div>
                 </div>
             </div>
+
             
         </div>
     </div>
@@ -268,42 +291,24 @@
     </div> -->
     <footer >
         <div class="footer">
-
             <!-- Left Section -->
             <div class="footer-section left">
-                <h3>WATCH THE VIDEO</h3>
-                <div class="footer-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.485 1.929c.763.763.763 1.999 0 2.762l-8.556 8.557a1.956 1.956 0 0 1-2.762 0l-1.929-1.929a1.956 1.956 0 0 1 0-2.762l8.557-8.556a1.956 1.956 0 0 1 2.762 0zm-3.035.707-8.557 8.557.586.586 8.557-8.557-.586-.586zm-7.071 9.192.586-.586 1.343 1.343-.586.586-1.343-1.343z"/></svg>
-                    <div>
-                        <strong>Needs Assessment</strong>
-                        <p>kashdkjsahdkjsahdksadhkjdhkadhkjads</p>
-                    </div>
-                </div>
-                <div class="footer-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.485 1.929c.763.763.763 1.999 0 2.762l-8.556 8.557a1.956 1.956 0 0 1-2.762 0l-1.929-1.929a1.956 1.956 0 0 1 0-2.762l8.557-8.556a1.956 1.956 0 0 1 2.762 0zm-3.035.707-8.557 8.557.586.586 8.557-8.557-.586-.586zm-7.071 9.192.586-.586 1.343 1.343-.586.586-1.343-1.343z"/></svg>
-                    <div>
-                        <strong>Insurance</strong>
-                        <p>kashdkjsahdkjsahdksadhkjdhkadhkjads</p>
-                    </div>
-                </div>
-                <div class="footer-item">
-                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M13.485 1.929c.763.763.763 1.999 0 2.762l-8.556 8.557a1.956 1.956 0 0 1-2.762 0l-1.929-1.929a1.956 1.956 0 0 1 0-2.762l8.557-8.556a1.956 1.956 0 0 1 2.762 0zm-3.035.707-8.557 8.557.586.586 8.557-8.557-.586-.586zm-7.071 9.192.586-.586 1.343 1.343-.586.586-1.343-1.343z"/></svg>
-                    <div>
-                        <strong>skahgkj</strong>
-                        <p>kashdkjsahdkjsahdksadhkjdhkadhkjads</p>
-                    </div>
+                <div class="image-container">
+                    <img src="./assets/images/Group 51.png" alt="Base Image" class="base-image">
+                    <img src="./assets/images/Group 2.png" alt="Overlay Image" class="overlay-image">
                 </div>
             </div>
-    
+        
             <!-- Right Section -->
             <div class="footer-section right">
                 <div class="footer-video-container">
-                    <video id="footer-video" class="footer-video" src="https://www.w3schools.com/html/mov_bbb.mp4"></video>
-                    <div class="play-icon" onclick="playVideo()">▶</div>
-                    <img src="logo.png" alt="Logo" class="footer-logo">
+                    <img src="./assets/images/Mask Group.png" alt="Mask Group" class="mask-group">
+                    <img src="./assets/images/Vector.png" alt="Vector" class="vector-image">
+                    <img src="./assets/images/Group 44.png" alt="Group 44" class="group-44">
                 </div>
             </div>
         </div>
+        
         <br />
         <div class="footer-bottom">
             <div class="footer-bottom-left">
