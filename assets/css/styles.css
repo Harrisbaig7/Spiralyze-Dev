@@ -184,6 +184,7 @@ form {
     width: 100%;
     padding: 12px 10px;
     border: 1px solid #ddd;
+    color: white;
     border-radius: 2px;
     font-size: 16px;
     margin: 5px 0;
@@ -225,7 +226,7 @@ button {
     justify-content: center;
     /* gap: 5px; */
     padding: 10px 20px;
-    background: #333;
+    background: #5BC8AF;
     color: white;
     border: none;
     cursor: pointer;
@@ -240,7 +241,7 @@ button img {
 }
 
 button:hover {
-    background: #555;
+    background: #35BB9C;
 }
 
 .footer {
