@@ -16,13 +16,14 @@
         <!-- Navigation Bar -->
         <nav class="navbar">
             <img src="./assets/images/Vector.png" alt="">
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
                 <button>HOME</button>
                 <button>ABOUT</button>
                 <button>CONTACT</button>
                 <span class="separator">|</span>
                 <button>Call NOW FOR A CONSULT <span class="number">123.456.7890</span></button>
             </div>
+            <button class="menu-button" id="menuButton">☰</button>
         </nav>
     
         <!-- Header Section -->
@@ -326,8 +327,29 @@
             </div>
         </div>
     </footer>
+
+
+    <!-- <script>
+        // JavaScript to toggle the navigation menu
+        document.getElementById('menuButton').addEventListener('click', function() {
+            var navLinks = document.getElementById('navLinks');
+            if (navLinks.style.display === 'block') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'block';
+            }
+        });
+    </script> -->
     <script>
-        const video = document.getElementById('footer-video');
+        
+        document.getElementById('menuButton').addEventListener('click', function() {
+            var navLinks = document.getElementById('navLinks');
+            if (navLinks.style.display === 'block') {
+                navLinks.style.display = 'none';
+            } else {
+                navLinks.style.display = 'block';
+            }
+        });const video = document.getElementById('footer-video');
         const playIcon = document.querySelector('.play-icon');
 
         function playVideo() {
@@ -345,33 +367,34 @@
         });
 
         let slideIndex = 1;
-showSlides(slideIndex);
+        showSlides(slideIndex);
 
-// Next/previous controls
-function plusSlides(n) {
-  showSlides(slideIndex += n);
-}
+        // Next/previous controls
+        function plusSlides(n) {
+        showSlides(slideIndex += n);
+        }
 
-// Thumbnail image controls
-function currentSlide(n) {
-  showSlides(slideIndex = n);
-}
+        // Thumbnail image controls
+        function currentSlide(n) {
+        showSlides(slideIndex = n);
+        }
 
-function showSlides(n) {
-  let i;
-  let slides = document.getElementsByClassName("mySlides");
-  let dots = document.getElementsByClassName("dot");
-  if (n > slides.length) {slideIndex = 1}
-  if (n < 1) {slideIndex = slides.length}
-  for (i = 0; i < slides.length; i++) {
-    slides[i].style.display = "none";
-  }
-  for (i = 0; i < dots.length; i++) {
-    dots[i].className = dots[i].className.replace(" active", "");
-  }
-  slides[slideIndex-1].style.display = "block";
-  dots[slideIndex-1].className += " active";
-    }
+        function showSlides(n) {
+        let i;
+        let slides = document.getElementsByClassName("mySlides");
+        let dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {slideIndex = 1}
+        if (n < 1) {slideIndex = slides.length}
+        for (i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        for (i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        slides[slideIndex-1].style.display = "block";
+        dots[slideIndex-1].className += " active";
+            }
+   
     </script>
 
 </body>

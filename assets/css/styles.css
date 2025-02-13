@@ -1,5 +1,4 @@
-/* G
-neral Styles */
+/* General Styles */
 * {
     /* overflow-x: hidden;  */
 
@@ -73,6 +72,8 @@ html, body {
     align-items: center;
     padding: 15px 10%;
     color: white;
+    background-color: #333;
+
 }
 
 .logo {
@@ -99,6 +100,15 @@ html, body {
     font-size: 1rem;
     cursor: pointer;
     padding: 5px 10px;
+}
+
+.menu-button {
+    display: none;
+    background: none;
+    border: none;
+    color: white;
+    font-size: 1.5rem;
+    cursor: pointer;
 }
 
 .nav-links button:hover {
@@ -1072,91 +1082,167 @@ letter-spacing: 0%;
     display: none;
 }
 
-/* Media Query for 768px */
+/* Media Queries for 768px */
 @media (max-width: 768px) {
-    .navbar .call-now {
-        display: block;
-        text-align: right;
-        margin-top: 10px;
+    .primary-button {
+        padding: 8px 16px;
+        font-size: 14px;
+        min-width: 180px;
     }
-    .header {
-        display: flex;
+
+    .arrow-icon {
+        width: 14px;
+        height: 14px;
+    }
+
+    .prev, .next {
+        padding: 12px;
+        font-size: 16px;
+    }
+
+    .custom-row-section {
+        padding: 0 30px;
+    }
+
+    .testimonial {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-    .three-images {
-        display: block;
+
+    .testimonial img {
+        width: 60px;
+        height: 60px;
     }
-    .content-section {
-        display: flex;
+
+    .testimonial-content {
+        max-width: 100%;
+    }
+
+    .text-box {
+        padding: 10px;
+    }
+
+    .carousel-container {
+        padding: 0 20px;
+    }
+
+    .image-box-testimonials {
+        width: 200px;
+        height: 200px;
+    }
+
+    .text-box {
+        padding: 10px;
+    }
+
+    .header-container {
         flex-direction: column;
+        align-items: center;
     }
-    .slider {
-        display: block;
-    }
-    .slider img {
-        order: 1;
-    }
-    .slider h2 {
-        order: 2;
-    }
-    .slider p {
-        order: 3;
-    }
-    .slider .dots {
-        order: 4;
-    }
-    .buttons-tooltips {
-        display: flex;
-        justify-content: space-around;
-    }
-    .footer {
-        display: flex;
-        flex-direction: column;
+
+    .quote-icon {
+        font-size: 20px;
     }
 }
 
-/* Media Query for 360px */
+/* Media Queries for 360px */
 @media (max-width: 360px) {
-    .navbar .menu-button {
+
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+
+}
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        background-color: #333;
+        position: absolute;
+        top: 60px;
+        right: 0;
+        padding: 10px 0;
+    }
+
+    .nav-links button {
+        padding: 10px;
+        text-align: center;
+        width: 100%;
+    }
+
+    .menu-button {
+        position:absolute ;
         display: block;
+        right: 0;
     }
-    .navbar .nav-items {
-        display: none;
+
+    .navbar img{
+        width: 120px;
+        height: 50px;
+        
     }
-    .header {
-        display: flex;
+
+    .primary-button {
+        padding: 6px 12px;
+        font-size: 12px;
+        min-width: 150px;
+    }
+
+    .arrow-icon {
+        width: 12px;
+        height: 12px;
+    }
+
+    .prev, .next {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .custom-row-section {
+        
+    }
+
+    .testimonial {
         flex-direction: column;
+        align-items: center;
+        text-align: center;
     }
-    .three-images {
-        display: none;
+
+    .testimonial img {
+        width: 50px;
+        height: 50px;
     }
-    .content-section {
-        display: flex;
+
+    .testimonial-content {
+        max-width: 100%;
+    }
+
+    .text-box {
+        padding: 8px;
+    }
+
+    .carousel-container {
+        padding: 0 10px;
+    }
+
+    .image-box-testimonials {
+        width: 180px;
+        height: 180px;
+    }
+
+    .text-box {
+        padding: 8px;
+    }
+
+    .header-container {
         flex-direction: column;
+        align-items: center;
     }
-    .slider {
-        display: flex;
-        flex-direction: column;
-    }
-    .slider img {
-        order: 1;
-    }
-    .slider h2 {
-        order: 2;
-    }
-    .slider p {
-        order: 3;
-    }
-    .slider .dots {
-        order: 4;
-    }
-    .buttons-tooltips {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-    }
-    .footer {
-        display: flex;
-        flex-direction: column;
+
+    .quote-icon {
+        font-size: 18px;
     }
 }
