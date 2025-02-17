@@ -1262,3 +1262,9 @@ letter-spacing: 0%;
 .d-flex {
     display: flex;
 }
+
+.main-content {
+    background: linear-gradient(to bottom, #F5F5F5 60%, white 60%);
+    min-height: 100vh; /* Ensure it covers the full height of the viewport */
+    padding: 20px; /* Add some padding if needed */
+}
