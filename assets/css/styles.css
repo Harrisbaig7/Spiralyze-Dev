@@ -443,7 +443,8 @@ button:hover {
     padding: 10px 20px;
     background-color: transparent;
     box-shadow: 0px 4px 6px 0px #00000014;
-    color: black;
+    color: #5BC8AF;
+    font-weight: 700;
     border: 2px solid #5BC8AF;
     border-radius: 4px;
     cursor: pointer;
