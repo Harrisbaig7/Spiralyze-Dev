@@ -274,7 +274,25 @@ button:hover {
 .image-container {
     position: relative;
     display: inline-block;
+    margin-right: 0px;
+    z-index: 2; 
 }
+
+/* GLASSY LOOK - START */
+
+.image-container::after {
+    content: "";
+    position: absolute;
+    right: 0;
+    top: 0;
+    width: 50%; /* Covers the left half */
+    height: 100%;
+    opacity: 0.5; /* Adjust opacity as needed */
+    background: linear-gradient(to left, rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0));
+    pointer-events: none; /* So it doesn’t block clicks */
+}
+
+/* GLASSY LOOK - END */
 
 .base-image {
     width: 700px; /* Adjust size as needed */
@@ -302,6 +320,8 @@ button:hover {
     position: relative;
     width: 600px; /* Adjust container size */
     height: 600px; /* Adjust container size */
+    margin-left: -55px;
+    z-index: 1; 
 }
 
 
