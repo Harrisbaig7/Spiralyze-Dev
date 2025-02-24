@@ -734,6 +734,70 @@ button:hover {
     }
 }
 
+.custom-row-for-features {
+    display: flex;
+    justify-content: space-between;
+    gap: 36px;
+
+    &.button-row { 
+        align-items: stretch;
+    }
+
+    .section {
+        width: 30%;
+        text-align: left;
+        flex-grow: 1; 
+
+        img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        p {
+            font-size: 14px;
+            line-height: 24px;
+            padding: 10px;
+            border-radius: 8px;
+        }
+    }
+    .convertable-sections {
+            display: flex;
+            flex-direction: row; /* Side by side */
+            gap: 10px;
+            width: 100%;
+        }
+
+        .convertable-sections .section {
+            flex: 1; /* Make both sections take equal width */
+            width: auto; /* Override default width */
+        }
+
+    @media (max-width: 768px) {
+        .custom-row-for-features {
+          flex-direction: column;
+          gap: 0px !important;
+        }
+        .convertable-sections {
+          display: flex;
+          flex-direction: column;
+        }
+        .section {
+          width: 100%;
+        }
+
+        .convertable-sections {
+            display: flex;
+          }
+          
+          .convertable-sections .section {
+            flex: 1; /* Makes each section take equal width */
+          }
+          
+      }
+
+}
+
 
 /* Section 2: Testimonials */
 .testimonials {

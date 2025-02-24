@@ -147,7 +147,7 @@
             <div class="line"></div>
           </div>
 
-          <div class="custom-row">
+          <div class="custom-row-for-features">
             <div class="section">
               <p>
                 Older adults want to play active and meaningful roles in their
@@ -159,7 +159,7 @@
               </p>
             </div>
             <div class="section">
-              <p>
+              <p class="move-text-from">
                 Older adults want to stay active and contribute to society in a
                 reciprocal manner (meaning that they want to exchange their
                 services and skills with others for the mutual benefit of the
@@ -171,7 +171,7 @@
 
             <!-- Third Section with Button -->
             <div class="section button-section">
-              <p>
+              <p class="move-text-to">
                 To stimulate social contacts, neighborhood initiatives can be
                 developed. Social meeting places, such as pubs and churches can
                 help to foster the development of close and peripheral
@@ -612,19 +612,14 @@
     </footer>
 
     <script>
-      document
-        .getElementById("menuButton")
-        .addEventListener("click", function () {
-          var navLinks = document.getElementById("navLinks");
-          if (navLinks.style.display === "block") {
-            navLinks.style.display = "none";
-          } else {
-            navLinks.style.display = "block";
-          }
-        });
+      document.getElementById("menuButton").addEventListener("click", function () {
+        var navLinks = document.getElementById("navLinks");
+        navLinks.style.display = navLinks.style.display === "block" ? "none" : "block";
+      });
+    
       const video = document.getElementById("footer-video");
       const playIcon = document.querySelector(".play-icon");
-
+    
       function playVideo() {
         if (video.paused) {
           video.play();
@@ -634,43 +629,96 @@
           playIcon.style.display = "block";
         }
       }
-
-      video.addEventListener("ended", () => {
-        playIcon.style.display = "block";
-      });
-
+    
       let slideIndex = 1;
       showSlides(slideIndex);
-
-      // Next/previous controls
+    
       function plusSlides(n) {
         showSlides((slideIndex += n));
       }
-
-      // Thumbnail image controls
+    
       function currentSlide(n) {
         showSlides((slideIndex = n));
       }
-
+    
       function showSlides(n) {
-        let i;
         let slides = document.getElementsByClassName("mySlides");
         let dots = document.getElementsByClassName("dot");
-        if (n > slides.length) {
-          slideIndex = 1;
-        }
-        if (n < 1) {
-          slideIndex = slides.length;
-        }
-        for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";
-        }
-        for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-        }
+        if (n > slides.length) slideIndex = 1;
+        if (n < 1) slideIndex = slides.length;
+        for (let i = 0; i < slides.length; i++) slides[i].style.display = "none";
+        for (let i = 0; i < dots.length; i++) dots[i].className = dots[i].className.replace(" active", "");
         slides[slideIndex - 1].style.display = "block";
         dots[slideIndex - 1].className += " active";
       }
+    
+      document.addEventListener("DOMContentLoaded", () => {
+        checkScreenSize();
+      });
+    
+      let isWrapped = false;
+      let originalText = ""; // Store the original text
+    
+      function checkScreenSize() {
+        const container = document.querySelector(".custom-row-for-features");
+        const sections = [...document.querySelectorAll(".custom-row-for-features .section:not(.button-section)")];
+        const buttonSection = document.querySelector(".button-section");
+    
+        if (!container || sections.length === 0 || !buttonSection) {
+          console.warn("❌ Required elements not found.");
+          return;
+        }
+    
+        const movedTextElement = document.querySelector(".move-text-from");
+        const targetElement = document.querySelector(".move-text-to");
+    
+        if (movedTextElement && targetElement) {
+          const fullText = movedTextElement.dataset.fullText || movedTextElement.textContent.trim();
+          const extractedText = fullText.split("community). ")[1]?.trim();
+          const remainingText = fullText.split(").")[0] + ").";
+    
+          if (window.innerWidth <= 768) {
+            if (!movedTextElement.dataset.fullText) movedTextElement.dataset.fullText = fullText;
+            if (extractedText) {
+              movedTextElement.textContent = remainingText;
+              targetElement.textContent = extractedText + " " + targetElement.textContent;
+            }
+          } else {
+            if (movedTextElement.dataset.fullText) {
+              movedTextElement.textContent = movedTextElement.dataset.fullText;
+              targetElement.textContent = targetElement.textContent.replace(extractedText, "").trim();
+            }
+          }
+        }
+    
+        if (window.innerWidth <= 768 && !isWrapped) {
+          const wrapper = document.createElement("div");
+          wrapper.classList.add("convertable-sections");
+    
+          sections.forEach(section => wrapper.appendChild(section));
+          container.insertBefore(wrapper, buttonSection);
+    
+          isWrapped = true;
+        } else if (window.innerWidth > 768 && isWrapped) {
+          const wrapper = document.querySelector(".convertable-sections");
+          if (wrapper) {
+            while (wrapper.firstChild) {
+              container.insertBefore(wrapper.firstChild, wrapper);
+            }
+            wrapper.remove();
+          }
+          isWrapped = false;
+        }
+      }
+    
+      let lastWidth = window.innerWidth;
+      window.addEventListener("resize", () => {
+        if ((lastWidth > 768 && window.innerWidth <= 768) || (lastWidth <= 768 && window.innerWidth > 768)) {
+          checkScreenSize();
+        }
+        lastWidth = window.innerWidth;
+      });
     </script>
+    
   </body>
 </html>
