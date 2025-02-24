@@ -21,10 +21,12 @@
       <nav class="navbar">
         <img src="./assets/images/Vector.png" alt />
         <div class="nav-links" id="navLinks">
-          <button>HOME</button>
-          <button>ABOUT</button>
-          <button>CONTACT</button>
-          <span class="separator">|</span>
+          <div class="nav-links-left">
+            <button class="active">HOME</button>
+            <button>ABOUT</button>
+            <button>CONTACT</button>
+            <span class="separator">|</span>
+          </div>
           <button>
             Call NOW FOR A CONSULT <span class="number">&nbsp;123.456.7890</span>
           </button>
@@ -35,83 +37,86 @@
       <!-- Header Section -->
       <header class="header">
         <div class="header-content">
-          <div class="left-section">
-            <img
-              src="./assets/images/get-an-intervention.png"
-              alt="Get an Intervention Icon"
-            />
-            <p class="get-an-intervention-content">
-              Showing greater respect to older adults can be done in several
-              ways : acknowledging and putting to use the talents and skills of
-              older adults; creating intergenerational initiatives; and allowing
-              older adults to stay active and independent for as long as
-              possible.
-            </p>
-          </div>
-          <div class="right-section">
-            <div class="contact-card">
-              <h2>Contact Us</h2>
-              <form id="form">
-                <div class="form-row">
-                  <div class="input-container">
-                    <input
-                      type="text"
-                      id="first-name"
-                      placeholder=" "
-                      required
-                    />
-                    <label for="first-name">First Name</label>
-                  </div>
-                  <div class="input-container">
-                    <input
-                      type="text"
-                      id="last-name"
-                      placeholder=" "
-                      required
-                    />
-                    <label for="last-name">Last Name</label>
-                  </div>
-                </div>
-                <div class="form-row">
-                  <div class="input-container">
-                    <input
-                      type="email"
-                      id="business-email"
-                      placeholder=" "
-                      required
-                    />
-                    <label for="business-email">Business Email</label>
-                  </div>
-                  <div class="input-container">
-                    <input type="text" id="company" placeholder=" " required />
-                    <label for="company">Company</label>
-                  </div>
-                </div>
-                <div class="form-full">
-                  <div class="input-container">
-                    <input type="text" id="country" placeholder=" " required />
-                    <label for="country">Country</label>
-                  </div>
-                </div>
-                <button type="submit">
-                  <img
-                    width="24"
-                    height="24"
-                    src="./assets/images/vector-2.png"
-                    alt="sent"
-                  />&nbsp; SUBMIT
-                </button>
-              </form>
+            <div class="left-section">
+                <!-- <img
+                    src="./assets/images/get-an-intervention.png"
+                    alt="Get an Intervention Icon"
+                /> -->
+                <h1 class="get-an-intervention">
+                  <span class="bold-text">GET AN</span> INTERVENTION
+                </h1>
+                <p class="get-an-intervention-content">
+                    Showing greater respect to older adults can be done in several
+                    ways : acknowledging and putting to use the talents and skills of
+                    older adults; creating intergenerational initiatives; and allowing
+                    older adults to stay active and independent for as long as
+                    possible.
+                </p>
             </div>
-          </div>
+            <div class="right-section">
+                <div class="contact-card">
+                    <h2>Contact Us</h2>
+                    <form id="form">
+                        <div class="form-row">
+                            <div class="input-container">
+                                <input
+                                    type="text"
+                                    id="first-name"
+                                    placeholder=" "
+                                    required
+                                />
+                                <label for="first-name">First Name</label>
+                            </div>
+                            <div class="input-container">
+                                <input
+                                    type="text"
+                                    id="last-name"
+                                    placeholder=" "
+                                    required
+                                />
+                                <label for="last-name">Last Name</label>
+                            </div>
+                        </div>
+                        <div class="form-row">
+                            <div class="input-container">
+                                <input
+                                    type="email"
+                                    id="business-email"
+                                    placeholder=" "
+                                    required
+                                />
+                                <label for="business-email">Business Email</label>
+                            </div>
+                            <div class="input-container">
+                                <input type="text" id="company" placeholder=" " required />
+                                <label for="company">Company</label>
+                            </div>
+                        </div>
+                        <div class="form-full">
+                            <div class="input-container">
+                                <input type="text" id="country" placeholder=" " required />
+                                <label for="country">Country</label>
+                            </div>
+                        </div>
+                        <button type="submit">
+                            <img
+                                width="24"
+                                height="24"
+                                src="./assets/images/vector-2.png"
+                                alt="sent"
+                            />&nbsp; SUBMIT
+                        </button>
+                    </form>
+                </div>
+            </div>
         </div>
         <div class="curve1">
-          <img src="./assets/images/Group-53.png" alt="Wave Design" />
+            <img src="./assets/images/Group-53.png" alt="Wave Design" />
         </div>
         <div class="curve2">
-          <img src="./assets/images/Rectangle-2.png" alt="Wave Design" />
+            <img src="./assets/images/Rectangle-2.png" alt="Wave Design" />
         </div>
-      </header>
+    </header>
     </div>
 
     <div class="main-content">

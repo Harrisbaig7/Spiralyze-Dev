@@ -18,6 +18,7 @@ html, body {
     background: #F5F5F5;
     text-align: center;
     width: 100%;
+    overflow-x: hidden; 
 }
 
 .navbar {
@@ -26,12 +27,82 @@ html, body {
     align-items: center;
 }
 
+.nav-links-left {
+    display: flex;
+        justify-content: center;
+        align-items: baseline;
+   
+    button {
+        color: grey !important;
+    }
+    .active {
+        color: white !important;
+        text-decoration: underline;
+    }
+}
+
+@media (max-width: 768px) {
+
+    /* navbar */
+    .navbar {
+        align-items: start !important;
+        padding: 15px !important;
+    }
+    .separator {
+        display: none;
+    }
+
+    .nav-links{
+        flex-direction: column;
+        gap: 0px !important;
+        align-items: end !important;
+    }
+
+    .nav-links-left > button {
+        margin-top: 2px;
+    }
+
+
+    .header {
+        padding: 0 !important;
+        padding-bottom: 80px !important;
+    }
+    /* header */
+    .header-content {
+        flex-direction: column;
+        gap: 0px !important;
+    }
+
+    .left-section {
+        max-width: none !important;
+        width: auto;
+        margin-bottom: 20px;
+        padding: 0px 15%;
+        text-align: center;
+    }
+    
+    .right-section {
+        width: auto !important;
+    }
+}
+
+.get-an-intervention {
+    font-size: 48px;
+    font-weight: bold;
+    color: white;
+    color: transparent; /* Make the text fill transparent */
+    -webkit-text-stroke: 2px white; /* Define the text stroke */
+  }
+  .bold-text {
+    
+    -webkit-text-stroke-width: 4px; /* Make it thicker */
+  }
+
 .header-wrapper {
     position: relative;
     background: url('/assets/images/Group-54.png') no-repeat center center;
     background-size: cover; 
     width: 100%;
-    height: 100vh;
     overflow: hidden;
 }
 
@@ -148,7 +219,8 @@ html, body {
 
 /* Contact Form */
 .contact-card {
-    background: linear-gradient(to bottom, #2A7D6C 100%, #3E6960);
+
+    background: linear-gradient(180deg, #2A7D6C 0%, rgba(62, 105, 96, 0.62) 100%);
     box-shadow: 0px 10px 50px 0px #0000001F;
     opacity: 0.6;
     padding: 20px;
@@ -1287,4 +1359,34 @@ letter-spacing: 0%;
     background: linear-gradient(to bottom, #F5F5F5 60%, white 60%);
     min-height: 100vh; /* Ensure it covers the full height of the viewport */
     padding: 20px; /* Add some padding if needed */
+}
+
+/* Header */
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+
+.left-section,
+.right-section {
+    width: 48%; /* Adjust width as needed */
+}
+
+/* Media query for screens with a width of 768px or less */
+@media (max-width: 768px) {
+    .header-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .left-section,
+    .right-section {
+        width: 100%;
+        margin-bottom: 20px; /* Add some space between the sections */
+    }
+
+    .right-section {
+        margin-bottom: 0; /* Remove bottom margin for the last section */
+    }
 }
