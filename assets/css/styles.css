@@ -15,7 +15,6 @@ html, body {
     /* overflow-x: hidden; */
     height: 100%;
     font-family: 'Montserrat';
-    background: #F5F5F5;
     text-align: center;
     width: 100%;
     overflow-x: hidden; 
@@ -100,7 +99,7 @@ html, body {
 
 .header-wrapper {
     position: relative;
-    background: url('/assets/images/Group-54.png') no-repeat center center;
+    background: url('../images/Group-54.png') no-repeat center center;
     background-size: cover; 
     width: 100%;
     overflow: hidden;
@@ -219,15 +218,21 @@ html, body {
 
 /* Contact Form */
 .contact-card {
-
-    background: linear-gradient(180deg, #2A7D6C 0%, rgba(62, 105, 96, 0.62) 100%);
-    box-shadow: 0px 10px 50px 0px #0000001F;
-    opacity: 0.6;
-    padding: 20px;
-    border-radius: 12px;
-    width: 350px;
-    color: white;
+  background: linear-gradient(
+    to bottom,
+    rgba(42, 125, 108, 1), 
+    rgba(62, 105, 96, 0.95) 50%,        /* Darker with high opacity */
+    rgba(62, 105, 96, 0.62) 60%        /* Darker and slightly transparent (bottom) */
+  );
+  box-shadow: 0px 10px 50px 0px #0000001F;
+  padding: 20px;
+  border-radius: 12px;
+  width: 350px;
+  color: white;
 }
+
+
+
 
 
 .contact-card h2 {
