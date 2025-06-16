@@ -87,13 +87,22 @@ html, body {
 
 .get-an-intervention {
     font-size: 48px;
-    font-weight: bold;
-    color: white;
-    color: transparent; /* Make the text fill transparent */
-    -webkit-text-stroke: 2px white; /* Define the text stroke */
+     font-weight: bold;
+    font-family: 'Montserrat', sans-serif;
+    letter-spacing: 0;
+
   }
+  .outlined-text {
+  font-weight: 700;
+  color: transparent;
+  -webkit-text-stroke: 1px white; /* white border */
+}
+
+.filled-text {
+  font-weight: 700;
+  color: white;
+}
   .bold-text {
-    
     -webkit-text-stroke-width: 4px; /* Make it thicker */
   }
 
@@ -200,7 +209,7 @@ html, body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 50px;
+    flex-wrap: wrap; 
 }
 
 .left-section {
@@ -225,35 +234,46 @@ html, body {
     rgba(62, 105, 96, 0.62) 60%        /* Darker and slightly transparent (bottom) */
   );
   box-shadow: 0px 10px 50px 0px #0000001F;
-  padding: 20px;
+  padding: 0px 30px;
   border-radius: 12px;
-  width: 350px;
+  width: 472px;
   color: white;
+  flex: 1;
+  height: 449px;
+      display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
-
-
-
-
 
 .contact-card h2 {
-    margin-bottom: 15px;
-    text-align: center;
-}
+text-align: center;
+margin-bottom: 2rem;
+font-family: Montserrat;
+font-weight: 700;
+font-size: 28px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
 
-/* Form Layout */
-form {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
 }
 
 .form-row {
     display: flex;
-    gap: 10px;
+    justify-content: center;
+    align-content: center;
+    gap: 20px;
+}
+.custom-margin {
+margin-top: 10px;
+}
+
+.mt-5 {
+margin-top: 5px;
 }
 
 .form-row .input-container {
-    flex: 1;
+    /* flex: 1; */
 }
 
 .form-full {
@@ -266,6 +286,17 @@ form {
     width: 100%;
 }
 
+.submit-button {
+    font-family: Montserrat;
+font-weight: 700;
+font-size: 18px;
+line-height: 100%;
+letter-spacing: 0%;
+text-align: center;
+vertical-align: middle;
+
+    padding: 1.25rem 4rem;
+}
 .input-container input {
     width: 100%;
     padding: 12px 10px;
@@ -317,7 +348,7 @@ button {
     border: none;
     cursor: pointer;
     border-radius: 5px;
-    margin: 10px auto 0;
+    margin: 35px auto 0;
     width: fit-content;
 }
 
@@ -1428,13 +1459,6 @@ letter-spacing: 0%;
     background: linear-gradient(to bottom, #F5F5F5 60%, white 60%);
     min-height: 100vh; /* Ensure it covers the full height of the viewport */
     padding: 20px; /* Add some padding if needed */
-}
-
-/* Header */
-.header-content {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
 }
 
 .left-section,
